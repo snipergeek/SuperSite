@@ -1,0 +1,158 @@
+/* Fond de base */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-block {
+  margin: 10px;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff75;
+  color: #333;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4583da;
+  color: #ffffffd0;
+}
+
+button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Bouton Menu Déroulant */
+#menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff75;
+  color: #333;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#menu-button:hover {
+  background: #4583da;
+  color: #ffffffd0;
+}
+
+/* Menu déroulant */
+#dropdown-menu {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  display: none; /* Le menu est caché par défaut */
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+#dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#dropdown-menu button:hover {
+  background: #eee;
+}
+
+/* Styles pour les différents thèmes */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.futuriste {
+  background: linear-gradient(135deg, #0ff, #ff0);
+  color: #000;
+}
+
+body.retro {
+  background: #222222;
+  color: #f0f0f0;
+}
+
+body.vintage {
+  background: #d2b48c;
+  color: #3e3e3e;
+}
+
+body.rose {
+  background: #ad44ad;
+  color: #fff;
+}
+
+body.ocean {
+  background: linear-gradient(135deg, #00bcd4, #00796b);
+  color: #fff;
+}
+
+body.sunset {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+}
+
+body.forest {
+  background: linear-gradient(135deg, #2e8b57, #228b22);
+  color: #fff;
+}
+
+body.desert {
+  background: linear-gradient(135deg, #f4a300, #f9d56e);
+  color: #3e3e3e;
+}
+
+body.night {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #fff;
+}
+
+body.morning {
+  background: linear-gradient(135deg, #fbd3e9, #bb377d);
+  color: #fff;
+}
+
+body.winter {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #fff;
+}
+
+body.spring {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #fff;
+}
+
+body.autumn {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: #fff;
+}
