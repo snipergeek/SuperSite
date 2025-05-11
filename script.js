@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
 
 const sitesPrincipaux = [
   { nom: "Animés", url: "https://anime-sama.fr/", type: "anime" },
-  { nom: "Films & Séries", url: "https://xalaflix.io/", type: "films" },
+  { nom: "Films & Séries", url: "https://moviqa.com/", type: "films" },
   { nom: "TV", url: "https://www.france.tv/", type: "autre" },
   { nom: "Jeux", url: "https://a6023.wordpress.com/", type: "autre" }
 ];
@@ -54,10 +54,10 @@ const secoursAnime = [
 ];
 
 const secoursFilms = [
-  "https://moviqa.com/",
   "https://monstream.blue/zeus-films/",
   "https://www.azmip.fr/",
-  "https://en.yts-official.mx/browse-movies"
+  "https://en.yts-official.mx/browse-movies",
+  "https://xalaflix.io/"
 ];
 
 const refreshInterval = 1000 * 60 * 60; // 1 heure
