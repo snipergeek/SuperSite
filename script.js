@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
 
 const sitesPrincipaux = [
   { nom: "Animés", url: "https://anime-sama.fr/", type: "anime" },
-  { nom: "Films & Séries", url: "https://www.hdss.rip/", type: "films" },
+  { nom: "Films & Séries", url: "https://www.hdss.fr/", type: "films" },
   { nom: "TV", url: "https://www.france.tv/", type: "autre" },
   { nom: "Jeux", url: "https://a6023.wordpress.com/", type: "autre" }
 ];
@@ -58,7 +58,6 @@ const secoursFilms = [
   "https://www.azmip.fr/",
   "https://en.yts-official.mx/browse-movies",
   "https://monstream.blue/zeus-films/",
-  "https://www.hdss.fr/",
   "https://xalaflix.io/"
 ];
 
