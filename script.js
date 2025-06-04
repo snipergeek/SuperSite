@@ -54,8 +54,9 @@ const secoursAnime = [
 ];
 
 const secoursFilms = [
-  "https://moviqa.com/",
+  "https://1jour1film22.online/",
   "https://www.azmip.fr/",
+  "https://moviqa.com/",
   "https://en.yts-official.mx/browse-movies",
   "https://monstream.blue/zeus-films/",
   "https://xalaflix.io/"
