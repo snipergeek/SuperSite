@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
 const sitesPrincipaux = [
   { nom: "Animés", url: "https://anime-sama.fr/", type: "anime" },
   { nom: "Films & Séries", url: "https://fs-mirror01.lol/", type: "films" },
-  { nom: "TV", url: "https://www.france.tv/", type: "autre" },
+  { nom: "TV", url: "https://fstv.lol/", type: "autre" },
   { nom: "Jeux", url: "https://a6023.wordpress.com/", type: "autre" }
 ];
 
