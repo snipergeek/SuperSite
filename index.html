@@ -4,34 +4,140 @@
   <meta charset="UTF-8">
   <title>SuperSite</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #121212;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+
+    #menu-button {
+      margin-top: 20px;
+    }
+
+    #dropdown-menu {
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #zone-secrete {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0); /* invisible */
+    }
+
+    #compteur {
+      display: none;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      padding: 15px 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      border: 2px solid white;
+      border-radius: 12px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>SuperSite</h1>
-<!-- Bouton pour afficher/masquer le menu -->
-<button id="menu-button">Changer de thème</button>
+  <h1>SuperSite</h1>
 
-<!-- Menu déroulant -->
-<div id="dropdown-menu" class="hidden">
-  <button id="theme-base">Thème de base</button>
-  <button id="theme-dark">Thème sombre</button>
-  <button id="theme-futuriste">Thème futuriste</button>
-  <button id="theme-retro">Thème rétro</button>
-  <button id="theme-vintage">Thème vintage</button>
-  <button id="theme-rose">Thème rose</button>
-  <button id="theme-ocean">Thème océan</button>
-  <button id="theme-sunset">Thème coucher du soleil</button>
-  <button id="theme-forest">Thème forêt</button>
-  <button id="theme-desert">Thème désert</button>
-  <button id="theme-night">Thème nuit étoilée</button>
-  <button id="theme-morning">Thème matin</button>
-  <button id="theme-winter">Thème hiver</button>
-  <button id="theme-spring">Thème printemps</button>
-  <button id="theme-autumn">Thème automne</button>
-</div>
+  <button id="menu-button">Changer de thème</button>
 
-<div id="sites-container"></div>
+  <div id="dropdown-menu" class="hidden">
+    <button id="theme-base">Thème de base</button>
+    <button id="theme-dark">Thème sombre</button>
+    <button id="theme-futuriste">Thème futuriste</button>
+    <button id="theme-retro">Thème rétro</button>
+    <button id="theme-vintage">Thème vintage</button>
+    <button id="theme-rose">Thème rose</button>
+    <button id="theme-ocean">Thème océan</button>
+    <button id="theme-sunset">Thème coucher du soleil</button>
+    <button id="theme-forest">Thème forêt</button>
+    <button id="theme-desert">Thème désert</button>
+    <button id="theme-night">Thème nuit étoilée</button>
+    <button id="theme-morning">Thème matin</button>
+    <button id="theme-winter">Thème hiver</button>
+    <button id="theme-spring">Thème printemps</button>
+    <button id="theme-autumn">Thème automne</button>
+  </div>
 
-<script src="script.js"></script>
+  <div id="sites-container"></div>
+
+  <div id="zone-secrete"></div>
+  <div id="compteur">Chargement...</div>
+
+  <!-- Firebase SDK (module) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, doc, getDoc, updateDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // 🔧 Remplace ce bloc par ta vraie config Firebase :
+    const firebaseConfig = {
+      apiKey: "TA_CLE_API",
+      authDomain: "tonprojet.firebaseapp.com",
+      projectId: "tonprojet",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const compteurEl = document.getElementById('compteur');
+    const zone = document.getElementById('zone-secrete');
+    let timer = null;
+
+    async function incrementCompteur() {
+      const compteurRef = doc(db, "compteur", "visites");
+      const snap = await getDoc(compteurRef);
+
+      if (snap.exists()) {
+        const valeur = snap.data().valeur || 0;
+        await updateDoc(compteurRef, { valeur: valeur + 1 });
+        compteurEl.textContent = "Visites : " + (valeur + 1);
+      } else {
+        await setDoc(compteurRef, { valeur: 1 });
+        compteurEl.textContent = "Visites : 1";
+      }
+    }
+
+    // Appeler l’incrémentation
+    incrementCompteur();
+
+    // Détecter souris immobile dans la zone
+    zone.addEventListener('mouseenter', () => {
+      timer = setTimeout(() => {
+        compteurEl.style.display = 'block';
+      }, 10000);
+    });
+
+    zone.addEventListener('mousemove', () => {
+      clearTimeout(timer);
+      compteurEl.style.display = 'none';
+    });
+
+    zone.addEventListener('mouseleave', () => {
+      clearTimeout(timer);
+      compteurEl.style.display = 'none';
+    });
+  </script>
+
+  <!-- Ton script personnalisé -->
+  <script src="script.js"></script>
 </body>
 </html>
