@@ -11,7 +11,7 @@ const themes = [
   { id: 'theme-futuriste', class: 'futuriste' },
   { id: 'theme-retro', class: 'retro' },
   { id: 'theme-vintage', class: 'vintage' },
-  { id: 'theme-violet', class: 'rose' },
+  { id: 'theme-rose', class: 'rose' },
   { id: 'theme-ocean', class: 'ocean' },
   { id: 'theme-sunset', class: 'sunset' },
   { id: 'theme-forest', class: 'forest' },
