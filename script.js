@@ -55,7 +55,6 @@ const secoursAnime = [
 
 const secoursFilms = [
   "https://monstream.blue/zeus-films/",
-  "https://xalaflix.io/",
   "https://en.yts-official.mx/browse-movies",
   "https://moviqa.com/"
 ];
