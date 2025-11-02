@@ -58,6 +58,7 @@ const secoursFilms = [
   "https://flemmix.town/",
   "https://monstream.blue/zeus-films/",
   "https://moviqa.com/",
+  "https://papadustream.horse",
   "https://laouvalindien.fr/"
 ];
 
