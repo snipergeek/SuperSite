@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
 
 const sitesPrincipaux = [
   { nom: "Animés", url: "https://anime-sama.org/", type: "anime" },
-  { nom: "Films & Séries", url: "https://empire-streami.ink/", type: "films" },
+  { nom: "Films & Séries", url: "https://www.flemmix.bond/", type: "films" },
   { nom: "TV", url: "https://fstv.fun/", type: "autre" },
   { nom: "Jeux", url: "https://a6023.wordpress.com/", type: "autre" }
 ];
