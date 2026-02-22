@@ -54,12 +54,12 @@ const secoursAnime = [
 ];
 
 const secoursFilms = [
-  "https://empire-streami.site",
-  "https://flemmix.town/",
-  "https://monstream.blue/zeus-films/",
-  "https://moviqa.com/",
+  "https://coflix.observer/",
+  "https://nakios.site/",
+  "https://french-stream.one/",
   "https://papadustream.horse",
   "https://laouvalindien.fr/"
+  "https://empire-streami.site",
 ];
 
 const refreshInterval = 1000 * 60 * 60; // 1 heure
