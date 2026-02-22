@@ -58,7 +58,7 @@ const secoursFilms = [
   "https://nakios.site/",
   "https://french-stream.one/",
   "https://papadustream.horse",
-  "https://laouvalindien.fr/"
+  "https://laouvalindien.fr/",
   "https://empire-streami.site",
 ];
 
