@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
 
 const sitesPrincipaux = [
   { nom: "Animés", url: "https://anime-sama.org/", type: "anime" },
-  { nom: "Films & Séries", url: "https://empire-streami.site", type: "films" },
+  { nom: "Films & Séries", url: "https://movix.blog/", type: "films" },
   { nom: "TV", url: "https://fstv.fun/", type: "autre" },
   { nom: "Jeux", url: "https://a6023.wordpress.com/", type: "autre" }
 ];
@@ -54,7 +54,7 @@ const secoursAnime = [
 ];
 
 const secoursFilms = [
-  "https://empire-streami.xyz",
+  "https://empire-streami.site",
   "https://flemmix.town/",
   "https://monstream.blue/zeus-films/",
   "https://moviqa.com/",
